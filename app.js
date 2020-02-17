@@ -5,7 +5,8 @@ const button = document.querySelector(".button");
 
 xo.addEventListener("click", ()=> {
       // rotate the clicked button "+ || x":
-    xo.style;
+    xo.style.transform = "rotate(45deg)";
+    xo.style.color = "white";
       // Spand the Navbar:
     navbar.style.width = "300px"
       // make it curvy at the end :

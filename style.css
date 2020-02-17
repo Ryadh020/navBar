@@ -67,6 +67,8 @@ main {
     border: none;
 
     background-color: #b3b3b3;
+    transition: all ease 0.5s;
+    transform: rotate(0deg);
 }
 .XO:hover {
     background-color: #585858;
