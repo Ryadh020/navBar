@@ -5,7 +5,7 @@ const button = document.getElementsByClassName("button");
   // detect if the + butto is clicked or no:
 let Showen = false;
 
-
+  // spand and shrink the navBar:
 xo.addEventListener("click", ()=> {
   if (!Showen) { // if the navBar is closed:
     // rotate the clicked button "+ || x":
@@ -15,7 +15,8 @@ xo.addEventListener("click", ()=> {
     navbar.style.width = "300px"
         // make it curvy at the end :
     setTimeout(() => {
-      navbarEnd.style.visibility = "visible";
+      navbar.style.borderTopRightRadius = "50px";
+      navbar.style.borderBottomRightRadius = "50px";
     }, 150);
         //Show the buttons after 1 second:
     setTimeout(() => {  
@@ -31,10 +32,10 @@ xo.addEventListener("click", ()=> {
       button[i].style.visibility = "hidden";
     }
     navbar.style.width = "0px" // shrink the navBar
-    navbarEnd.style.visibility = "hidden";  // make the navBar sharp at the end
+    navbar.style.borderTopRightRadius = "0px";   // make the navBar sharp at the end
+    navbar.style.borderBottomRightRadius = "0px";  
     Showen = false;
   }
-
 })
 
 
