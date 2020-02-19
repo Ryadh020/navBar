@@ -1,7 +1,12 @@
+//NAvbar:
 const xo = document.querySelector(".XO");
 const navbar = document.querySelector(".navBar");
 const navbarEnd = document.querySelector(".navbarEnd");
 const button = document.getElementsByClassName("button");
+const homeButton = document.getElementById("home");
+
+// section:
+const data = document.querySelector(".data");
   // detect if the + butto is clicked or no:
 let Showen = false;
 
@@ -38,4 +43,8 @@ xo.addEventListener("click", ()=> {
   }
 })
 
+  // on clicking the navigation buttons:
+homeButton.addEventListener("click", ()=> {
+  data.style.display = "inherit";
+})
 
