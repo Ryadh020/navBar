@@ -46,5 +46,8 @@ xo.addEventListener("click", ()=> {
   // on clicking the navigation buttons:
 homeButton.addEventListener("click", ()=> {
   data.style.display = "inherit";
+  setTimeout(() => {
+    data.style.height = "900px";
+  }, 50);
 })
 
