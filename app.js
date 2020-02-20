@@ -36,7 +36,21 @@ xo.addEventListener("click", ()=> {
     }, 800);
     Showen = true;
   } else { // if the navbar is open:
-    data.style.height = "10px";
+      // hide text with animation:
+    title.style.top =  "16px";
+    contentText.style.top = "10px"
+    list.style.right = "20px"
+      // hide the data section content :
+    setTimeout(() => {
+      titleContainer.style.visibility = "hidden";
+      content.style.visibility = "hidden";
+      list.style.visibility ="hidden";
+    }, 200);
+      // shrink the data section :
+    setTimeout(() => {
+      data.style.height = "10px";
+    }, 300);
+      // hide the data section :
     setTimeout(() => {
       data.style.display = "none";
     }, 1500);
@@ -54,15 +68,16 @@ xo.addEventListener("click", ()=> {
 
   // on clicking the navigation buttons:
 homeButton.addEventListener("click", ()=> {
-  data.style.display = "flex";
-  setTimeout(() => {
+  data.style.display = "flex";  // show the data section
+  setTimeout(() => {  // spand the data section
     data.style.height = "900px";
   }, 0);
-  setTimeout(() => {
+  setTimeout(() => {  
+      // show the data section content :
     titleContainer.style.visibility = "visible";
     content.style.visibility = "visible";
     list.style.visibility ="visible";
-
+      // show text with animation:
     title.style.top =  "0px";
     contentText.style.top = "0px"
     list.style.right = "0px"
