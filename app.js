@@ -7,6 +7,11 @@ const homeButton = document.getElementById("home");
 
 // section:
 const data = document.querySelector(".data");
+const titleContainer = document.querySelector(".title");
+const title = document.querySelector(".title-blink");
+const content = document.querySelector(".content");
+const contentText = document.querySelector(".content-text");
+const list = document.querySelector(".list");
   // detect if the + butto is clicked or no:
 let Showen = false;
 
@@ -34,7 +39,7 @@ xo.addEventListener("click", ()=> {
     data.style.height = "10px";
     setTimeout(() => {
       data.style.display = "none";
-    }, 1000);
+    }, 1500);
     xo.style.transform = "rotate(45deg)";
     xo.style.color = "black";
     for (var i = 0; i < button.length; i++) { // hide all buttons:
@@ -49,9 +54,17 @@ xo.addEventListener("click", ()=> {
 
   // on clicking the navigation buttons:
 homeButton.addEventListener("click", ()=> {
-  data.style.display = "inherit";
+  data.style.display = "flex";
   setTimeout(() => {
     data.style.height = "900px";
-  }, 50);
-})
+  }, 0);
+  setTimeout(() => {
+    titleContainer.style.visibility = "visible";
+    content.style.visibility = "visible";
+    list.style.visibility ="visible";
 
+    title.style.top =  "0px";
+    contentText.style.top = "0px"
+    list.style.right = "0px"
+  }, 900);
+})
