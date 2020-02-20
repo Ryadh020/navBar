@@ -31,6 +31,10 @@ xo.addEventListener("click", ()=> {
     }, 800);
     Showen = true;
   } else { // if the navbar is open:
+    data.style.height = "10px";
+    setTimeout(() => {
+      data.style.display = "none";
+    }, 1000);
     xo.style.transform = "rotate(45deg)";
     xo.style.color = "black";
     for (var i = 0; i < button.length; i++) { // hide all buttons:
