@@ -82,9 +82,9 @@ nav {
 }
 /* the main sections style*/
 section {
-    display: none;
-    width: 95vw;
-    height: 10px;
+    /*display: none;*/ /*modified*/
+    width: 95vw;  
+    height: 900px;  /*modified*/
     flex-direction: column;
     align-items: center;
     margin: 15px 0px;
@@ -95,7 +95,7 @@ section {
     transition: all 1s ease;
 }
 .title {
-    visibility: hidden;
+    /*visibility: hidden;*/   /*modified*/
     width: 100px;
     height: 40px;
     overflow: hidden;
@@ -108,7 +108,7 @@ h3 {
     transition: all 0.4s ease;
 }
 .content {
-    visibility: hidden;
+    /*visibility: hidden;*/   /*modified*/
 }
 .content-text {
     position: relative;
@@ -117,9 +117,43 @@ h3 {
     transition: all 0.4s ease;
 }
 .list {
-    visibility: hidden;
+    /*visibility: hidden;*/   /*modified*/
     position: relative;
     right: 20px;
 
     transition: all 0.4s ease;
 }
+
+/* the floating Image :*/
+.image-container {
+    width: 300px;
+    height: 200px;
+
+    border: 1px green solid;
+    overflow: hidden;
+}
+.image-content {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    width: 300px;
+    height: 200px;
+}
+.image-border {
+    position: relative;
+    top: -204px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    width: 300px;
+    height: 200px;
+
+    border: 35px #ff0000 solid;
+    transition: 0.2s all ease;
+}
+
+
