@@ -12,6 +12,11 @@ const title = document.querySelector(".title-blink");
 const content = document.querySelector(".content");
 const contentText = document.querySelector(".content-text");
 const list = document.querySelector(".list");
+
+// floating image bellow the frame:
+const image = document.querySelector(".image-content");
+const frame = document.querySelector(".image-border");
+
   // detect if the + butto is clicked or no:
 let Showen = false;
 
@@ -83,3 +88,17 @@ homeButton.addEventListener("click", ()=> {
     list.style.right = "0px"
   }, 900);
 })
+
+  // on hovering in the image frame:
+frame.addEventListener("mouseover", ()=> {
+  image.style.top = "30px";
+})
+  // on hovering out the image frame: 
+frame.addEventListener("mouseout", ()=> {
+  image.style.top = "0px";
+})
+
+/*
+const image = document.querySelector(".image-content");
+const frame = document.querySelector(".image-border");
+*/

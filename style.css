@@ -129,7 +129,7 @@ h3 {
     width: 300px;
     height: 200px;
 
-    border: 1px green solid;
+    border: 1px grey solid;
     overflow: hidden;
 }
 .image-content {
@@ -141,6 +141,8 @@ h3 {
 
     width: 300px;
     height: 200px;
+
+    transition: 0.2s all ease;
 }
 .image-border {
     position: relative;
@@ -152,7 +154,7 @@ h3 {
     width: 300px;
     height: 200px;
 
-    border: 35px #ff0000 solid;
+    border: 35px #d9d9d9 solid;
     transition: 0.2s all ease;
 }
 
