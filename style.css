@@ -209,7 +209,7 @@ h3 {
 
 .scontent {
     position: relative;
-    top: -200px;
+    top: -250px;
     padding: 15px;
 }
 
@@ -250,4 +250,23 @@ h3 {
     top: 30px;
 
     transition: all 1s ease;
+}
+
+.pagesNumber {
+    display: flex;
+    flex-direction: row;
+
+    position: relative;
+    top: -90px;
+    left: 340px;
+
+    color: white;
+    transition: all 1s ease;
+}
+
+.actual {
+    position: relative;
+    left: 0px;
+
+    transition: all 0.5s ease;
 }

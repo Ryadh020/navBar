@@ -144,6 +144,8 @@ const scndLine = document.querySelector(".scndLine");
 
 const menuButton = document.querySelector(".menuButton");
 
+const actualPage = document.querySelector(".actual");
+
 
   // detect the page pivoting:
 let pivot = false;
@@ -177,6 +179,13 @@ butttton.addEventListener("mouseout", ()=> {
     if (!pivot) {
       setTimeout(() => {
         page.style.borderTopLeftRadius = "100%";
+        // animate the actual page button:
+        actualPage.style.left = "50px";
+        setTimeout(() => {
+          actualPage.style.left = "0px";
+            // change the page number:
+          actualPage.innerHTML = "2";
+        }, 500);
       }, 0);
       setTimeout(() => {
         page.style.top = "200px";
@@ -189,11 +198,18 @@ butttton.addEventListener("mouseout", ()=> {
     } else {
       setTimeout(() => {
         page.style.top = "0px";
+          // animate the actual page button:
+        actualPage.style.left = "50px";
+        setTimeout(() => {
+          actualPage.style.left = "0px";
+            // change the page number:
+          actualPage.innerHTML = "1";
+        }, 500);
       }, 0);
       setTimeout(() => {
         page.style.borderTopLeftRadius = "0%";
           // show the text content:
-        stitle.style.top = "40px";
+        stitle.style.top = "42px";
         frstline.style.top = "30px";
         scndLine.style.top = "30px";
       }, 800);
