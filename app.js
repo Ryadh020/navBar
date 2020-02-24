@@ -21,6 +21,10 @@ const cords = document.querySelector(".cords");
 const x = document.querySelector(".x");
 const y = document.querySelector(".y");
 
+// pivot page:
+const butttton = document.querySelector(".menu");
+const page = document.querySelector(".back");
+
   // detect if the + butto is clicked or no:
 let Showen = false;
 
@@ -119,9 +123,6 @@ frame.addEventListener("mousemove", (event)=> {
 })
 
 
-
-
-
   // on hovering out the image frame: 
 frame.addEventListener("mouseout", ()=> {
   image.style.top = "0px";
@@ -129,22 +130,35 @@ frame.addEventListener("mouseout", ()=> {
 })
 
 
+// IV. Pivoting page :
+const scontent = document.querySelector(".scontent");
+
+const h1 = document.querySelector(".h1");
+const stitle = document.querySelector(".stitle");
+
+const fline = document.querySelector(".fline");
+const frstline = document.querySelector(".frstline");
+
+const sline = document.querySelector(".sline");
+const scndLine = document.querySelector(".scndLine");
 
 
-const butttton = document.querySelector(".menu");
-const page = document.querySelector(".back");
-
+  // detect the page pivoting:
 let pivot = false;
+
   // when hovering the button:
 butttton.addEventListener("mouseover", ()=> {
   if (!pivot) {
     page.style.borderTopLeftRadius = "15%";
+  }else {
+    page.style.top = "190px";
   }
 })
-
 butttton.addEventListener("mouseout", ()=> {
   if (!pivot) {
     page.style.borderTopLeftRadius = "0%";
+  }else {
+    page.style.top = "200px";
   }
 })
 
@@ -154,24 +168,27 @@ butttton.addEventListener("mouseout", ()=> {
       setTimeout(() => {
         page.style.borderTopLeftRadius = "100%";
       }, 0);
-      
       setTimeout(() => {
-        page.style.left = "200px";
+        page.style.top = "200px";
+          // show the text content:
+        stitle.style.top = "0px";
+        frstline.style.top = "0px";
+        scndLine.style.top = "0px";
       }, 400);
-  
       pivot = true;
     } else {
       setTimeout(() => {
-        page.style.left = "0px";
+        page.style.top = "0px";
       }, 0);
-
       setTimeout(() => {
         page.style.borderTopLeftRadius = "0%";
+          // show the text content:
+        stitle.style.top = "40px";
+        frstline.style.top = "30px";
+        scndLine.style.top = "30px";
       }, 800);
-
       pivot = false;
     }
-
   })
 
 
