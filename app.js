@@ -94,26 +94,60 @@ homeButton.addEventListener("click", ()=> {
 })
 
   // on hovering in the image frame:
-frame.addEventListener("mousemove", ()=> {
-    // get the coordinates of the window:
-  let xCord = event.clientX/10;
-  let yCord = event.clientY/10;
+frame.addEventListener("mousemove", (event)=> {
 
-  image.style.top = `${xCord}px`;
-  image.style.bottom = `${yCord}px`;
-  image.style.left = `${xCord}px`;
-  image.style.right = `${xCord}px`;
+  let Width = screen.width;
+  let Height = screen.height;
+
+    // get the coordinates of the window:
+  let xCord = event.clientX;
+  let yCord = event.clientY;
+
+  let min = Height - yCord;
+  let max = Height - yCord + 200;
+
+
+  image.style.top = `${10}px`;
+  image.style.left = `${10}px`;
 
     // display the coordinates:
-  x.innerHTML = `X: ${xCord}`;
-  y.innerHTML = `Y: ${yCord}`;
+  if(yCord < min + 100) {
+
+  }
+  x.innerHTML = `Ymin: ${min}`;
+  y.innerHTML = `Ymax: ${max}`;
 })
+
+
+
+
+
   // on hovering out the image frame: 
 frame.addEventListener("mouseout", ()=> {
   image.style.top = "0px";
-  image.style.top = "0px";
-  image.style.top = "0px";
-  image.style.top = "0px";
+  image.style.left = "0px";
 })
 
 
+
+const butttton = document.querySelector(".menu");
+const page = document.querySelector(".back");
+
+butttton.addEventListener("mouseover", ()=> {
+  page.style.borderTopLeftRadius = "15%";
+})
+
+butttton.addEventListener("mouseout", ()=> {
+  page.style.borderTopLeftRadius = "0%";
+})
+
+
+butttton.addEventListener("click", ()=> {
+  page.style.borderTopLeftRadius = "100%";
+  page.style.left = "100px";
+
+  setTimeout(() => {
+    page.style.borderTopLeftRadius = "10%";
+    page.style.left = "200px";
+  }, 500);
+})
