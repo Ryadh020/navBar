@@ -130,24 +130,49 @@ frame.addEventListener("mouseout", ()=> {
 
 
 
+
 const butttton = document.querySelector(".menu");
 const page = document.querySelector(".back");
 
+let pivot = false;
+  // when hovering the button:
 butttton.addEventListener("mouseover", ()=> {
-  page.style.borderTopLeftRadius = "15%";
+  if (!pivot) {
+    page.style.borderTopLeftRadius = "15%";
+  }
 })
 
 butttton.addEventListener("mouseout", ()=> {
-  page.style.borderTopLeftRadius = "0%";
+  if (!pivot) {
+    page.style.borderTopLeftRadius = "0%";
+  }
 })
 
+  // when cliking the button:
+  butttton.addEventListener("click", ()=> {
+    if (!pivot) {
+      setTimeout(() => {
+        page.style.borderTopLeftRadius = "100%";
+      }, 0);
+      
+      setTimeout(() => {
+        page.style.left = "200px";
+      }, 400);
+  
+      pivot = true;
+    } else {
+      setTimeout(() => {
+        page.style.left = "0px";
+      }, 0);
 
-butttton.addEventListener("click", ()=> {
-  page.style.borderTopLeftRadius = "100%";
-  page.style.left = "100px";
+      setTimeout(() => {
+        page.style.borderTopLeftRadius = "0%";
+      }, 800);
 
-  setTimeout(() => {
-    page.style.borderTopLeftRadius = "10%";
-    page.style.left = "200px";
-  }, 500);
-})
+      pivot = false;
+    }
+
+  })
+
+
+
