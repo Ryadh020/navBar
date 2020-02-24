@@ -144,6 +144,7 @@ const scndLine = document.querySelector(".scndLine");
 
 const menuButton = document.querySelector(".menuButton");
 
+const pagesNumber = document.querySelector(".pagesNumber");
 const actualPage = document.querySelector(".actual");
 
 
@@ -179,8 +180,10 @@ butttton.addEventListener("mouseout", ()=> {
     if (!pivot) {
       setTimeout(() => {
         page.style.borderTopLeftRadius = "100%";
+        menuButton.style.color = "black";
         // animate the actual page button:
         actualPage.style.left = "50px";
+        pagesNumber.style.color = "black";
         setTimeout(() => {
           actualPage.style.left = "0px";
             // change the page number:
@@ -198,8 +201,10 @@ butttton.addEventListener("mouseout", ()=> {
     } else {
       setTimeout(() => {
         page.style.top = "0px";
+        menuButton.style.color = "white";
           // animate the actual page button:
         actualPage.style.left = "50px";
+        pagesNumber.style.color = "white";
         setTimeout(() => {
           actualPage.style.left = "0px";
             // change the page number:
