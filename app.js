@@ -17,6 +17,10 @@ const list = document.querySelector(".list");
 const image = document.querySelector(".image-content");
 const frame = document.querySelector(".image-border");
 
+const cords = document.querySelector(".cords");
+const x = document.querySelector(".x");
+const y = document.querySelector(".y");
+
   // detect if the + butto is clicked or no:
 let Showen = false;
 
@@ -71,7 +75,7 @@ xo.addEventListener("click", ()=> {
   }
 })
 
-  // on clicking the navigation buttons:
+  // on clicking the navigation buttons(home):
 homeButton.addEventListener("click", ()=> {
   data.style.display = "flex";  // show the data section
   setTimeout(() => {  // spand the data section
@@ -90,15 +94,26 @@ homeButton.addEventListener("click", ()=> {
 })
 
   // on hovering in the image frame:
-frame.addEventListener("mouseover", ()=> {
-  image.style.top = "30px";
+frame.addEventListener("mousemove", ()=> {
+    // get the coordinates of the window:
+  let xCord = event.clientX/10;
+  let yCord = event.clientY/10;
+
+  image.style.top = `${xCord}px`;
+  image.style.bottom = `${yCord}px`;
+  image.style.left = `${xCord}px`;
+  image.style.right = `${xCord}px`;
+
+    // display the coordinates:
+  x.innerHTML = `X: ${xCord}`;
+  y.innerHTML = `Y: ${yCord}`;
 })
   // on hovering out the image frame: 
 frame.addEventListener("mouseout", ()=> {
   image.style.top = "0px";
+  image.style.top = "0px";
+  image.style.top = "0px";
+  image.style.top = "0px";
 })
 
-/*
-const image = document.querySelector(".image-content");
-const frame = document.querySelector(".image-border");
-*/
+
