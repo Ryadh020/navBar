@@ -142,6 +142,8 @@ const frstline = document.querySelector(".frstline");
 const sline = document.querySelector(".sline");
 const scndLine = document.querySelector(".scndLine");
 
+const menuButton = document.querySelector(".menuButton");
+
 
   // detect the page pivoting:
 let pivot = false;
@@ -150,8 +152,16 @@ let pivot = false;
 butttton.addEventListener("mouseover", ()=> {
   if (!pivot) {
     page.style.borderTopLeftRadius = "15%";
+    menuButton.style.top = "18px";
+    setTimeout(() => {
+      menuButton.style.top = "0px";
+    }, 200);
   }else {
     page.style.top = "190px";
+    menuButton.style.top = "18px";
+    setTimeout(() => {
+      menuButton.style.top = "0px";
+    }, 200);
   }
 })
 butttton.addEventListener("mouseout", ()=> {
